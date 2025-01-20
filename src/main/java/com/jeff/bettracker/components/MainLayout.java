@@ -1,4 +1,11 @@
 package com.jeff.bettracker.components;
 
-public class MainLayout {
+import com.vaadin.flow.component.applayout.AppLayout;
+
+public class MainLayout extends AppLayout {
+    public MainLayout() {
+        //UI.getCurrent().getElement().getThemeList().add("dark");
+        NavBar navBar = new NavBar();
+        addToNavbar(navBar);
+    }
 }

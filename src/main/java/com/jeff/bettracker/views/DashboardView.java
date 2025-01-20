@@ -1,5 +1,6 @@
 package com.jeff.bettracker.views;
 
+import com.jeff.bettracker.components.MainLayout;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H1;
@@ -7,7 +8,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import jakarta.annotation.security.RolesAllowed;
 
-@Route(value = "dashboard")
+@Route(value = "dashboard", layout = MainLayout.class)
 @RolesAllowed({"ADMIN", "USER"})
 public class DashboardView extends VerticalLayout {
     public DashboardView() {
